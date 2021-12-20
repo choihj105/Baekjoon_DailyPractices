@@ -1,0 +1,4 @@
+﻿  1.cpp
+C:\Users\호준\Desktop\백준\cpp\Design_Pattern\1.cpp(201,14): error C2248: 'TextBox::ViewText': private 멤버('TextBox' 클래스에서 선언)에 액세스할 수 없습니다.
+C:\Users\호준\Desktop\백준\cpp\Design_Pattern\1.cpp(189): message : 'TextBox::ViewText' 선언을 참조하십시오.
+C:\Users\호준\Desktop\백준\cpp\Design_Pattern\1.cpp(187): message : 'TextBox' 선언을 참조하십시오.
