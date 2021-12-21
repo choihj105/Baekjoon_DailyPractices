@@ -21,7 +21,7 @@ int MAX_result = 0; // ÃÖ´ë °ª
 
 int cal() {
 	int result = 0;
-	for (int i = 0; i < n-1, i++) { 
+	for (int i = 0; i < n - 1; i++) {
 		result += abs(basket[i] - basket[i + 1]);
 	}
 	return result;
@@ -52,6 +52,8 @@ int main() {
 	for (int i = 0; i < n; i++) {
 		cin >> A[i];
 	}
+
+	DFS(0);
 
 	cout << MAX_result;
 	
