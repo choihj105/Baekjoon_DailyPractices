@@ -9,6 +9,7 @@ sol
 2) 이중 for문에서 단순하게 생각하여 풀게끔.
 */
 #include <iostream>
+#include <ctime>
 using namespace std;
 
 int main()
@@ -16,15 +17,14 @@ int main()
 	int n;
 	cin >> n;
 
-	int res = 0;
+	long long res = 0;
 	
 	for (int i = 1; i <= n; i++) {
-			
-		// 결과값 계산해주는 식
 		
 		res += (n / i) * i;
 
-			
 	}
+
 	cout << res << endl;
+
 }
