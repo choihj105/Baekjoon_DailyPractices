@@ -13,12 +13,36 @@
 #include <iostream>
 using namespace std;
 
+	
+int main()
+{
+	int n; // 입력 n
+	long long m; // n의 배수값
+	int cnt; // 결과값
+	
+	while (cin >> n) {
+		m = 1; cnt = 0;
+
+		while (true) {
+			if (m % n == 0) {
+				cnt += 1;
+				cout << cnt << endl;
+				break;
+			}
+			m = m * 10 + 1;
+		}
+	
+	}
+}
+
+
+/*
 int cal(int n) {
-	
+
 	// 배수 m, 자리수 result
-	
+
 	int m = 1, result = 0;
-	
+
 	while (true)
 	{
 		// 배수 m 를 찾아 냈을 때
@@ -28,14 +52,14 @@ int cal(int n) {
 				result += 1;
 			} while (m /= 10);
 			return result;
-			
+
 		}
 		// m을 -> 1 -> 11 -> 111 -> ...
 		else {
 			m = m * 10 + 1;
 		}
 	}
-	
+
 }
 
 int main()
@@ -58,3 +82,5 @@ int main()
 	}
 
 }
+
+*/
