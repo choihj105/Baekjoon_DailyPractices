@@ -21,8 +21,6 @@ int main()
 	
 	
 	while (cin >> n) {
-		if (cin.eof()) break;
-		
 		m = 1; cnt = 1;
 
 		while (true) {
@@ -32,7 +30,7 @@ int main()
 				break;
 			}
 			else {
-				//m %= n; // m의 수를 미리 mod 해줘서 속도를 높힌다.
+				m %= n; // m의 수를 미리 mod 해줘서 속도를 높힌다.
 				m = m * 10 + 1;
 				cnt += 1;
 			}
