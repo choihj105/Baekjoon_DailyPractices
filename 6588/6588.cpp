@@ -27,12 +27,41 @@ bool isPrime(int n) {
 
 
 int main() {
+	int n;
+	int odd_i, odd_j;
+
+	while(true)
+	{
+		cin >> n;
+		if (n == 0) break;
+
+		odd_i = 1; odd_j = n - 1; // defalut
+
+		for (int j = 1; j <= (n / 4) + 1; j++) {
+
+			if (isPrime(odd_j) && isPrime(odd_i))
+			{
+				cout << n << " = " << odd_i << " + " << odd_j << endl;
+				break;
+			}
+
+			odd_i += 2; odd_j -= 2;
+		}
+		if (odd_i > odd_j) cout << "Goldbach's conjecture is wrong." << endl;
+	}
+
+}
+
+
+
+/*
+int main() {
 	int n[100001];
 	int odd_i, odd_j;
 	int cnt = 0;
-	
+
 	// 입력
-	while (true) {		
+	while (true) {
 		cin >> n[cnt];
 		if (n[cnt] == 0) break;
 		++cnt;
@@ -41,7 +70,7 @@ int main() {
 
 	// 출력
 	for (int i = 0; i < cnt; i++) {
-		
+
 		odd_i = 1; odd_j = n[i] - 1; // defalut
 
 		for (int j = 1; j <= (n[i] / 4) + 1; j++) {
@@ -58,3 +87,4 @@ int main() {
 	}
 
 }
+*/
