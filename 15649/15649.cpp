@@ -19,12 +19,11 @@ sol)
 #include <iostream>
 using namespace std;
 
-
+// 1. recursive 
+/*
 int bucket[8] = {0,};
 bool bucket_flag[8] = { false, };
 
-
-// nPm
 void dfs(int n, int m, int cnt = 0) {
 	
 	if (cnt == m) {
@@ -52,5 +51,24 @@ int main() {
 	int n, m;
 	cin >> n >> m;
 	dfs(n, m);
+
+}
+*/
+
+// 2.
+
+int main() {
+	int n, m;
+	cin >> n >> m;
+
+	int* result = new int[m];
+	result 
+
+	for (int i = 0; i < m; i++) {
+
+
+
+	}
+
 
 }
