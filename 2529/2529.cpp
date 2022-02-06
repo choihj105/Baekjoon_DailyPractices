@@ -4,6 +4,7 @@
 i:  부등호 n개
 o:  MAX, MIN 의 조건식을 만족하는 숫자
 
+sol) backtracking, 중복조합
 */
 
 #include <iostream>
