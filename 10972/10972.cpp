@@ -7,6 +7,10 @@ o: 다음 순열 , 만약 마지막이라면 -1 출력
 
 sol)
 
+1. 순열 만드는 함수를 만들어서 자연스럽게 그 다음 숫자를 보자
+
+2. 다른 방법을 사용을 하자
+
 
 */
 
@@ -18,7 +22,7 @@ int G_n;
 int G_arrA[MAX];
 int G_arrB[MAX];
 
-bool G_visited[MAX];
+bool G_visited[MAX] = {false,};
 bool G_isEnd = false;
 
 void Input(int n) {
@@ -43,7 +47,7 @@ void DFS(int cnt = 0) {
 
 		if (G_isEnd) {
 			for (int i = 0; i < G_n; i++) {
-				G_arrA[i];
+				cout << G_arrA[i] << " ";
 			}
 			exit(0);
 
@@ -52,11 +56,12 @@ void DFS(int cnt = 0) {
 		return;
 	}
 
+
 	for (int i = 0; i < G_n; i++) {
 
 		if (!G_visited[i]) {
 			G_visited[i] = true;
-			G_arrA[i] = i;
+			G_arrA[cnt] = i+1;
 			
 			DFS(cnt + 1);
 			G_visited[i] = false;
