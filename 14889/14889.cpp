@@ -78,11 +78,7 @@ void DFS(int cnt = 0, int num = 0, int n = 0) {
 
 void Sol() {
 
-	for (int i = 1; i <= G_n / 2; i++) {
-		DFS(0, i, 0);
-		for (int i = 0; i < G_n; i++) { G_visited[i] = false; }
-
-	}
+	DFS(0, G_n/2, 0);
 
 	cout << G_Result;
 }
