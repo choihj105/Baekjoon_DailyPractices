@@ -130,6 +130,8 @@ int isNext(int n, int m, bool row_column) {
 	int tmp = 10;
 	if (row_column) {
 
+		if (m == 3) return 1;
+
 		if (Marked[n][m + 1] == 1) {
 			return tmp * isNext(n, m + 1, row_column);
 		}
@@ -139,6 +141,9 @@ int isNext(int n, int m, bool row_column) {
 
 	}
 	else {
+		
+		if (n == 3) return 1;
+
 		if (Marked[n + 1][m] == 0) {
 			return tmp * isNext(n + 1, m, row_column);
 		}
@@ -185,6 +190,7 @@ void DFS(int dest, int cnt = 0, int n = 0) {
 		Marked_reset();
 
 		if (Res < total) {	Res = total;}
+		
 		return;
 	}
 
@@ -203,9 +209,10 @@ void DFS(int dest, int cnt = 0, int n = 0) {
 int main() {
 	Input();
 
-	for (int i = 1; i <= K; i++) {
+	for (int i = 0; i <= K; i++) {
 		DFS(i);
 	}
 
 	cout << Res;
+
 }
