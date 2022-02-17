@@ -8,12 +8,9 @@ o:
 sol)
 
 */
-
+// 2, 조합으로 푼 부분수열
 #include <iostream>
 using namespace std;
-
-
-// 2, 조합으로 푼 부분수열
 
 int G_N;
 int G_S;
