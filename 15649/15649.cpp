@@ -20,27 +20,27 @@ sol)
 using namespace std;
 
 // 1. recursive 
-/*
-int bucket[8] = {0,};
-bool bucket_flag[8] = { false, };
+
+int arr[8] = {0,};
+bool isVisited[8] = { false, };
 
 void dfs(int n, int m, int cnt = 0) {
 	
 	if (cnt == m) {
-		for (int i = 0; i < m; i++) { cout << bucket[i] << " "; }
+		for (int i = 0; i < m; i++) { cout << arr[i] << " "; }
 		cout << "\n";
 		return;
 	}
 
 	for (int i = 0; i < n; i++) {
 		
-		if (bucket_flag[i]) { continue; }
+		if (isVisited[i]) { continue; }
 
-		bucket[cnt] = i + 1;
-		bucket_flag[i] = true;
+		arr[cnt] = i + 1;
+		isVisited[i] = true;
 		
 		dfs(n, m, cnt+1);
-		bucket_flag[i] = false;
+		isVisited[i] = false;
 	}
 	
 
@@ -53,22 +53,22 @@ int main() {
 	dfs(n, m);
 
 }
-*/
-
-// 2.
-
-int main() {
-	int n, m;
-	cin >> n >> m;
-
-	int* result = new int[m];
-	result 
-
-	for (int i = 0; i < m; i++) {
 
 
-
-	}
-
-
-}
+//// 2.
+//
+//int main() {
+//	int n, m;
+//	cin >> n >> m;
+//
+//	int* result = new int[m];
+//	result 
+//
+//	for (int i = 0; i < m; i++) {
+//
+//
+//
+//	}
+//
+//
+//}
