@@ -14,7 +14,5 @@ int main() {
 	}
 
 	cout << time;
-
-
 }
 
