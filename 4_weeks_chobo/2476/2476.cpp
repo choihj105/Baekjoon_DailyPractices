@@ -5,7 +5,7 @@ int main()
 {
 	int n; cin >> n;
 	int total = 0;
-	for (int i = 0; i < n; i++) {
+	for (int k = 0; k < n; k++) {
 		int arr[7] = { 0, };
 	
 		// 1. ют╥б
