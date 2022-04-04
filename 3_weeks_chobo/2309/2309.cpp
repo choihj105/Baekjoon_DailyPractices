@@ -23,7 +23,6 @@ int main() {
 		cin >> Dwraf[i];
 	}
 
-
 	// 1. Bubble sort
 	for (int i = 8; i > 0; i--) {
 		for (int j = 0; j < i; j++) {
@@ -42,16 +41,11 @@ int main() {
 		}
 	}
 
-
 	// 3. print
 	for (int i = 0; i < 9; i++) {
 		if (i == a || i == b) continue;
 		cout << Dwraf[i] << endl;
 	}
-
-
-
-
 }
 
 // 쉽게풀도록 노력해보기
