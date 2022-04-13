@@ -6,17 +6,6 @@ int n;
 
 bool isSame(int diff, int end) {
 
-	//for (int i = 0; i + 2*diff<= end; i++) {
-	//	
-	//	
-	//	int isFlag = 0; // 서로 다르다
-	//	for (int j = 0; j < diff; j++)
-	//		if (arr[i+j] == arr[i + diff +j]) isFlag += 1;
-
-	//	if (isFlag) return true;
-	//}
-
-	//return false;
 	string a;
 	for (int i = 0; i < end; i++) {
 		a.push_back(arr[i]);
