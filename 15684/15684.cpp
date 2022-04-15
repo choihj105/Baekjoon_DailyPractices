@@ -41,7 +41,7 @@ bool Play() {
 	return true;
 }
 
-void BFS(int cnt, int t, int x = 0, int y = 0) {
+void DFS(int cnt, int t, int k = 0) {
 
 	if (cnt == t) {
 		if (Play()) {
@@ -53,20 +53,18 @@ void BFS(int cnt, int t, int x = 0, int y = 0) {
 		
 	}
 
-	else {
-		for (int i = 1; i < n; i++) {
-			for (int j = 1; j <= h; j++) {
+	for (int i = k; i < (n - 1) * h; i++) {
 
-				if (!arr[i][j] && !arr[i+1][j]) {
-					arr[i][j] = true;
-					BFS(cnt + 1, t);
-					arr[i][j] = false;
-					
-				}
-			}
+		int x = i % (n - 1);  // 0 ~ n-1
+		int y = i / (n-1);
+		x++; y++;
+
+		if (!arr[x-1][y] && !arr[x][y] && !arr[x + 1][y]) {
+			arr[x][y] = true;
+			DFS(cnt + 1, t, i+1);
+			arr[x][y] = false;
 		}
 	}
-	
 }
 
 int main() {
@@ -78,7 +76,7 @@ int main() {
 	}
 
 
-	BFS(0, 1); BFS(0, 1); BFS(0, 2); BFS(0, 3);
+	DFS(0, 0); DFS(0, 1); DFS(0, 2); DFS(0, 3);
 	cout << -1;
 	
 	
