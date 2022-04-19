@@ -8,20 +8,6 @@ int textMap[10][10];
 int MAX = 0;
 queue<pair<int, int>> q;
 
-
-void check() {
-	
-	cout << MAX;
-	// check
-	cout << endl;
-	for (int i = 1; i <= n; i++) {
-		for (int j = 1; j <= m; j++) {
-			cout << map[i][j] << " ";
-		}
-		cout << endl;
-	}
-}
-
 // 조합 + BFS
 // 바이러스 퍼트리기
 void BFS(int x, int y) {
@@ -60,6 +46,7 @@ int Cal() {
 	}
 
 	int _cnt = 0;
+	
 	for (int i = 0; i < n * m; i++) {
 		int x = i / m;
 		int y = i % m;
@@ -67,7 +54,7 @@ int Cal() {
 		if (map[x][y] == 0) _cnt++;
 		if (map[x][y] == 3) map[x][y] = 0;
 	}
-	check();
+	
 	return _cnt;
 }
 
@@ -75,6 +62,7 @@ int Cal() {
 // 벽세우기
 void DFS(int cnt = 0, int k =0) {
 	if (cnt == 3) {
+
 		int tmp = Cal();
 		MAX = MAX < tmp ? tmp : MAX;
 		return;
@@ -117,7 +105,8 @@ int main() {
 	}
 	
 	DFS();
-
+	cout << MAX;
+	
 
 
 
