@@ -1,30 +1,43 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
 int main() {
-	string str;
-	cin >> str;
-	if (str[0] == 'A') {
-		if (str[1] == '+') cout << "4.3";
-		else if (str[1] == '-') cout << "3.7";
-		else { cout << "4.0"; }
+	char c[2]; cin >> c[0] >> c[1];
+	float f;
+	if (c[0] == 'F') f = 0.0f;
+	else {
+		f = (float)'E' - c[0];
+		if (c[1] == '+') f += 0.3f;
+		else if (c[1] == '-') f -= 0.3f;
 	}
-	else if (str[0] == 'B') {
-		if (str[1] == '+') cout << "3.3";
-		else if (str[1] == '-') cout << "2.7";
-		else { cout << "3.0"; }
-	}
-	else if (str[0] == 'C') {
-		if (str[1] == '+') cout << "2.3";
-		else if (str[1] == '-') cout << "1.7";
-		else { cout << "2.0"; }
-	}
-	else if (str[0] == 'D') {
-		if (str[1] == '+') cout << "1.3";
-		else if (str[1] == '-') cout << "0.7";
-		else { cout << "1.0"; }
-	}
-	else cout << "0.0";
-	
+	cout << fixed; cout.precision(1);
+	cout << f;
 }
+
+
+//int main() {
+//	string str;
+//	cin >> str;
+//	if (str[0] == 'A') {
+//		if (str[1] == '+') cout << "4.3";
+//		else if (str[1] == '-') cout << "3.7";
+//		else { cout << "4.0"; }
+//	}
+//	else if (str[0] == 'B') {
+//		if (str[1] == '+') cout << "3.3";
+//		else if (str[1] == '-') cout << "2.7";
+//		else { cout << "3.0"; }
+//	}
+//	else if (str[0] == 'C') {
+//		if (str[1] == '+') cout << "2.3";
+//		else if (str[1] == '-') cout << "1.7";
+//		else { cout << "2.0"; }
+//	}
+//	else if (str[0] == 'D') {
+//		if (str[1] == '+') cout << "1.3";
+//		else if (str[1] == '-') cout << "0.7";
+//		else { cout << "1.0"; }
+//	}
+//	else cout << "0.0";
+//	
+//}
