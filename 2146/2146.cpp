@@ -45,6 +45,7 @@ void Labeling(int y, int x, int label) {
 // 한 섬에서, 다른 섬으로 가기까지의 최소거리 구하기 (섬에 대한 테두리를 만들어보리기)
 int BFS(int label) {
 	queue<pair<int, int>> q;
+	
 	// 한 섬에 대한 isVisited 채우기
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
@@ -80,7 +81,7 @@ int BFS(int label) {
 				// 바다만 발견한 경우
 				else {
 					q.push({ ny,nx });
-					isVisited[ny][nx] = false;
+					isVisited[ny][nx] = true;
 				}
 			}
 		}
@@ -131,6 +132,19 @@ int main() {
 	cout << MIN;
 }
 
+/*
+10
+1 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 1
+*/
 
 //
 //int n;
