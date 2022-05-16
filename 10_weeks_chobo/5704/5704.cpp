@@ -14,7 +14,9 @@ int main() {
 		}
 		
 		bool flg = false;
-		for (int i = 0; i < 26; i++) { letter[i] || flg++; }
+		for (int i = 0; i < 26; i++) {
+			if (!letter[i]) flg = true;
+		}
 		cout << (flg ? 'N' : 'Y') << endl;
 		memset(letter, false, 26);
 	}
