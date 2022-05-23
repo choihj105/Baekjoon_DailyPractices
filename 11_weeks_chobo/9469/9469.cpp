@@ -6,9 +6,9 @@ int main() {
 
 	while (p--) {
 		int n; 
-		float d, a, b, f;
+		double d, a, b, f;
 		cin >> n >> d >> a >> b >> f;
-		float time = d / (a + b);
+		double time = d / (a + b);
 		
 		cout << fixed;
 		cout.precision(6);
