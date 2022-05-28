@@ -13,7 +13,7 @@ int main() {
 
 	cin >> n >> h;
 
-	for (int i = 0; i < n/2; i++) {
+	for (int i = 0; i < (n/2); i++) {
 		cin >> floor[i] >> ceil[i];
 	}
 	
@@ -27,8 +27,9 @@ int main() {
 		
 		int tmp(0);
 		// i번째 겹치는 석순
-		tmp += upper_bound(floor, floor + (n/2), i) - floor - 1;
-		tmp += upper_bound(ceil, ceil + (n / 2), h - i + 1) - ceil - 1;
+		tmp += lower_bound(floor, floor + (n/2), i) - floor;
+		tmp += lower_bound(ceil, ceil + (n / 2), h - i +1) - ceil;
+		tmp = n - tmp;
 		
 		if (result > tmp) {
 			cnt = 1;
@@ -38,8 +39,6 @@ int main() {
 			cnt++;
 		}
 	}
-
 	cout << result << ' ' << cnt;
-
 
 }
